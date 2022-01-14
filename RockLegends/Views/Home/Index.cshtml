@@ -1,0 +1,27 @@
+﻿@model string[]
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    Er zijn @Model!.Length studenten
+</p>
+
+<ul>
+    @foreach(string name in Model)
+    {
+        <li>@name</li>
+    }
+</ul>
+
+<h3>Trainer</h3>
+
+@ViewBag.TrainerName (@ViewBag.Age)
+
+<p>
+    @DateTime.Now
+</p>
+

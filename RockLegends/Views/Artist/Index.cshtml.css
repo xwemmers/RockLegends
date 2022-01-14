@@ -1,0 +1,29 @@
+﻿
+/*
+
+    Alle CSS in deze file geldt alleen voor Index.cshtml.
+
+    Isolated CSS (scoped CSS)
+
+    
+*/
+
+
+
+/*body {
+    background-color: brown;
+}
+*/
+
+table {
+    width: 50%;
+    margin-left: 25%;
+}
+
+th {
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+}

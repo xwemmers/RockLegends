@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/RockLegends.Styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header>
+        Training ASP.NET
+    </header>
+
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Artist" asp-action="Index">Artiesten</a>
+        <a asp-controller="Album" asp-action="Index">Albums</a>
+    </nav>
+
+    @RenderBody()
+
+</body>
+</html>

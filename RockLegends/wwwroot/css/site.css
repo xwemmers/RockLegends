@@ -1,0 +1,44 @@
+﻿body {
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 150%;
+    background-color: darkblue;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+}
+
+    nav a {
+        color: blue;
+        margin: 0 10px;
+    }
+
+td, th {
+    text-align: left;
+}
+
+.text-danger, .warning {
+    color: red;
+}
+
+table {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.col-md-4 {
+    margin-left: 33%;
+}
+
+
+

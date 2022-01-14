@@ -1,0 +1,43 @@
+﻿@model Artist
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post">
+
+    <label asp-for="Name"></label>
+    <br/>
+    Naam
+    <br />
+    <input asp-for="Name" />
+    <br />
+    <span asp-validation-for="Name"  class="warning"></span>
+
+    <br />
+    <br />
+
+    Beginjaar:
+    <br />
+    <input asp-for="BeginYear" />
+    <br />
+    <span asp-validation-for="BeginYear" class="warning"></span>
+
+    <br />
+    <br />
+
+    Eindjaar:
+    <br />
+    <input asp-for="EndYear" />
+    <br />
+    <span asp-validation-for="EndYear" class="warning"></span>
+
+    <br />
+    <br />
+
+    <input type="submit" value="Opslaan" />
+
+
+</form>

@@ -1,0 +1,75 @@
+﻿@model List<Artist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Er zijn @Model!.Count artiesten</h1>
+
+<p>
+    Voeg een <a asp-controller="Artist" asp-action="Create">nieuwe artiest</a> toe.
+</p>
+
+<table>
+    <tr>
+        <th>ViewComponent Taghelper</th>
+@*
+        <th>ViewComponent</th>
+        <th>Partial view</th>
+        <th>Direct plaatje</th>
+*@
+        <th>
+            <label asp-for="@Model[0].ArtistID"></label>
+        </th>
+        <th>
+            <label asp-for="@Model[0].Name"></label>
+        </th>
+        <th>
+            <label asp-for="@Model[0].BeginYear"></label>
+        </th>
+        <th>
+            <label asp-for="@Model[0].EndYear"></label>
+        </th>
+    </tr>
+
+    @foreach(var a in Model)
+    {
+        <tr>
+            <td>
+                <vc:Photo id="@a.ArtistID"></vc:Photo>
+            </td>
+@*            <td>
+                @await Component.InvokeAsync("Photo", new { id = a.ArtistID })
+            </td>
+            <td>
+                <partial name="_Plaatje" model="a.Photo" />
+            </td>
+            <td>
+                @if (a.Photo != null)
+                {
+                   <img src="data:image;base64,@System.Convert.ToBase64String(a.Photo)" width="200" />                    
+                }
+            </td>
+*@            <td>@a.ArtistID</td>
+            <td>@a.Name</td>
+            <td>@a.BeginYear</td>
+            <td>@a.EndYear</td>
+            <td>
+                <a asp-controller="Artist" asp-action="Edit" asp-route-id="@a.ArtistID">edit</a>
+                <a asp-controller="Artist" asp-action="Delete" asp-route-id="@a.ArtistID">delete</a>
+                <a asp-controller="Artist" asp-action="CreateUpdate" asp-route-id="@a.ArtistID">CreateOrUpdate</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    <a asp-controller="Artist" asp-action="CreateUpdate">Create or Update</a>
+</p>
+
+<partial name="_Tijdstip" model="DateTime.Now"  />
+
+
+
+@*@Html.Partial("_Tijdstip", DateTime.Now)*@
+

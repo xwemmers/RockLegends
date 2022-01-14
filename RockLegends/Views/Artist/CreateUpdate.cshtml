@@ -1,0 +1,32 @@
+﻿@model Artist
+
+@{
+    ViewData["Title"] = "CreateUpdate";
+}
+
+<h1>CreateUpdate</h1>
+
+<form method="post">
+
+    <input asp-for="ArtistID" readonly type="text" />
+
+    <br />
+    <br />
+    <label asp-for="Name"></label>
+    <br />
+    <input asp-for="Name" />
+    <br />
+    <br />
+    <label asp-for="BeginYear"></label>
+    <br />
+    <input asp-for="BeginYear" />
+    <br />
+    <br />
+    <label asp-for="EndYear"></label>
+    <br />
+    <input asp-for="EndYear" />
+    <br />
+    <br />
+    <input type="submit" value="Opslaan" />
+
+</form>
