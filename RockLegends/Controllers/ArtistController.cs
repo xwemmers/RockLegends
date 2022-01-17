@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RockLegends.Filters;
 
 namespace RockLegends.Controllers
 {
+    [MyLoggingFilter]
     public class ArtistController : Controller
     {
         // Dependency Injection
@@ -16,6 +18,8 @@ namespace RockLegends.Controllers
 
         public IActionResult Index()
         {
+            throw new Exception("Some error");
+
             // Haal de data op uit de DB
             var list = _context!.Artists!.ToList();
 
